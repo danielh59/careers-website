@@ -28,12 +28,7 @@
 			<h2 class="text-center mt-3 mb-4" style="color:darkcyan"><u>Open Positions</u></h2>
 				<div>
 					{%for job in jobs%}
-					<div>
-						<h4 style="color:darkcyan"> {{job['title']}} </h4>
-						<div>
-							<b>Location:</b> {{job['location']}}
-						</div>
-					</div>
+					{% include 'job_item.html' %}
 					{% endfor %}
 				</div>
 			<div class="text-center">
