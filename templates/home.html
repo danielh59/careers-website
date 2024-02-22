@@ -5,26 +5,23 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>OneTech Careers</title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-		<style> #banner {
-			width: 100%;
-			height: 320;
-		}
-		#header {
-			color:lightcyan;
-		}
-		</style>
+		<link href="/static/styles.css" rel="stylesheet">		
 	</head>
 	<body>
 		{% include 'navbar_advanced.html' %}
-		<div><img class="img-fluid mx-auto d-block" id="banner" src="static/cdg_darkbg_sm.jpg">
-			<h1 id="header" class="text-center mt-3 mb-4 carousel-caption"><b>[</b> {{company_name}} Careers <b>]</b> </h1>	
+		<div>
+			<img id="banner" src="static/cdg_darkbg_sm.jpg">
+			<div class="container">
+				<h1 id="banner_text" class="mt-3 mb-4 carousel-caption"><b>[</b> {{company_name}} Careers <b>]</b>	
+				<br><br>I'm a <span class="autotype"></span> </h1>
+			</div>
 		</div>
 		<div class="container">
 			<h2 class="text-center mt-3 mb-4"> About {{company_name}}</h2>
 			<div class="row mb-6">
-				<p class="lead col-6" > Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-				<div class="col-md-6"><img class="img-responsive" style="height: 320px; width: 100%; border-radius: 4px;" src="http://127.0.0.1:5000/static/collab_pic.jpg">
+				<p class="lead col-6"> <b> Welcome to OneTech, your gateway to a world of endless opportunities in the realm of Information Technology careers.
+				 At OneTech, we are passionate about empowering individuals to pursue and thrive in IT careers that align with their aspirations and ambitions. Whether you're an aspiring coder, a cybersecurity enthusiast, a data science aficionado, or a technology aficionado looking to make your mark in the digital world, OneTech is here to support you every step of the way. <br><br> Join our vibrant community of IT professionals, enthusiasts, and learners as we embark on a journey of discovery, growth, and innovation together. Whether you're just starting your career or seeking to advance to the next level, OneTech is your trusted partner in achieving your goals and realizing your full potential in the exciting world of IT.</b></p>
+				<div class="col-md-6"><img class="img-responsive" style="height: 360px; width: 100%; border-radius: 4px;" src="http://127.0.0.1:5000/static/collab_pic.jpg">
 				</div>
 			</div>
 			<h2 class="text-center mt-3 mb-4" style="color:darkcyan"><u>Job Listings</u></h2>
@@ -38,6 +35,15 @@
 			</div>
 
 		</div>
+		<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+		<script>
+			var typed= new Typed(".autotype", {
+				strings: ["Software Architect", "Backend Specialist", "Fronted Pioneer"],
+				typeSpeed: 250,
+				backSpeed: 150,
+				loop: true
+			})
+		</script>
 	</body>
 	{% include 'footer.html' %}
 
