@@ -6,10 +6,15 @@
 #banner_text {
   top: 50%;
   left: 50%;
-  color:rgb(244, 255, 43);
+  color:rgb(255, 255, 255);
   transform: translate(-50%, -50%);
   font-size: 50px;
   font-weight: 600;
-  background-color: black;
-    /* opacity: 0.3; */
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5)); 
+  padding: 10px; 
+  border-radius: 15px;
+  display: inline; /* Display the text as inline to make the background fit around the text */
 }
+  span {
+    color:rgb(244, 255, 43);
+  }  
